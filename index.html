@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramienta para generar contraseñás</title>
+    <link rel="stylesheet" href="./css/confi.css">
+
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="contenedor">
+        <!-- ---------- -->
+
+        <div class="contenedor-marco">
+
+            <!--  Titulo-->
+            <h1>Genrador De Contraseña</h1>
+
+
+            <!-- cuadro donde se mostrara la contraseña creada -->
+            <input type="text" id="text-contrasena" disabled>
+            
+
+            <!-- El rango de caracteres que la contraseña tendra -->
+            <div class="contenedor-rango"> 
+                <label for="min-length">3</label>
+                <input id="rango" type="range" min="3" max="13" step="1">
+                <label for="max-length">10</label>
+            </div>
+
+
+            <!-- Configuraciones sobre que caracteres quieres en tu contraseña, mayusculas, minusculas, numeros, simbolos -->
+            <div class="contenedor-configuraciones">
+
+                <!-- Agregar mayusculas -->
+                <div class="checkbox">
+                    <input type="checkbox" id="uppercase" name="uppercase" checked>
+                    <label for="uppercase">Incluir Mayusculas</label>
+                </div>
+
+                <!-- Agregar Minusculas -->
+                <div class="checkbox">
+                    <input type="checkbox" id="minuscula" name="minuscula" checked>
+                    <label for="minuscula">Incluir Minusculas</label>
+                </div>
+
+
+                <!-- Agregar numeros -->
+                <div class="checkbox">
+                    <input type="checkbox" id="numeros" name="numeros" checked>
+                    <label for="numeros">Incluir Numeros</label>
+                </div>
+
+
+                <!-- Agregar Simbolos -->
+                <div class="checkbox">
+                    <input type="checkbox" id="simbolos" name="simbolos" checked>
+                    <label for="simbolos">Incluir Simbolos</label>
+                </div>
+
+
+                <!-- ----- -->
+            </div>
+
+
+            <!-- boton para generar contraseña -->
+
+            <button id="btn-generador" onclick="validarCampos()">Generar Contraseña</button>
+
+
+
+        </div>
+
+        <!-- --------- -->
+    </div>
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>
